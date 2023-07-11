@@ -6,10 +6,10 @@
 }
 
 .navbar {
-  width: 100%;
+  width: 96%;
   border: 2px grey solid;
   padding: 10px;
-  margin-bottom: 12px;
+  margin: 0 2% 5px 2%;
 }
 
 .dropdown_button {
@@ -56,4 +56,8 @@
   font-size: 1.2rem;
   padding-bottom: 5px;
   color: rgb(5, 113, 113);
+}
+
+.todo_item input {
+  margin-left: 5px;
 }
