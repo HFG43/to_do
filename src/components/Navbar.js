@@ -1,14 +1,27 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 
 const Navbar = () => {
   const [dropdown, setDropdown] = useState(false);
+  const ref = useRef();
+  useEffect(() => {
+    const handler = (event) => {
+      if(dropdown && ref.current && !ref.current.contains(event.target)){
+        setDropdown(false);
+      }
+    };
+    document.addEventListener("mousedown", handler);
+    return () => {
+      document.removeEventListener("mousedown", handler);
+    };
+  }, [dropdown]);
+  
   return (
-    <nav>
+    <nav className="navbar">
       <ul>
         <li>Home</li>
         <li>About</li>
-        <li>
-          <button onClick={() => setDropdown((prev) => !prev)}>Services<span>&#8595;</span>
+        <li ref={ref}>
+          <button className="dropdown_button" onClick={() => setDropdown((prev) => !prev)}>Services<span>&#8595;</span>
           </button>
           {dropdown && (
             <ul>

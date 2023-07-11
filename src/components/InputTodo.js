@@ -1,4 +1,4 @@
 const InputTodo = () => {
-  return <div> input field here...</div>
+  return <div className="input"> input field here...</div>
 };
 export default InputTodo;
