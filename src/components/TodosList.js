@@ -1,8 +1,10 @@
+import TodoItem from './TodoItem';
+
 const TodoList = ({ todosProps }) => {
   return (
     <ul>
       {todosProps.map((todo) =>(
-      <li>{todo.title}</li>
+      <TodoItem itemProp={todo} />
     ))}
   </ul>
   );
