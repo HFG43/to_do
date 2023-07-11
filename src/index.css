@@ -25,6 +25,10 @@
   margin: 12px 0 12px 20%;
 }
 
+.dropdown_list {
+  margin-top: 1rem;
+}
+
 .header {
   margin: 5% 10% 2% 10%;
   border: 2px grey solid;

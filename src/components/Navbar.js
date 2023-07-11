@@ -26,7 +26,7 @@ const Navbar = () => {
             <span>&#8595;</span>
           </button>
           {dropdown && (
-            <ul>
+            <ul className="dropdown_list">
               <li>Design</li>
               <li>Development</li>
             </ul>
